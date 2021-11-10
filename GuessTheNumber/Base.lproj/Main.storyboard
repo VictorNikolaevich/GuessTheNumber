@@ -66,7 +66,7 @@
                                     <action selector="goVC3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOA-vJ-2eU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-xr-6ht">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-xr-6ht">
                                 <rect key="frame" x="20" y="300.5" width="374" height="45.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -105,21 +105,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH3-8i-gaC">
-                                <rect key="frame" x="169" y="514" width="76" height="36"/>
+                                <rect key="frame" x="169" y="488" width="76" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfQ-mU-UIT">
+                                <rect key="frame" x="115" y="540" width="184" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="9NQ-r9-iWO" kind="modal" id="X4n-EW-xXk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GGc-Af-8zh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IH3-8i-gaC" firstAttribute="top" secondItem="yeb-KL-xw6" secondAttribute="bottom" constant="48" id="ClM-7z-KpK"/>
+                            <constraint firstItem="wfQ-mU-UIT" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="115" id="5fw-1d-i1B"/>
+                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="wfQ-mU-UIT" secondAttribute="trailing" constant="115" id="7rL-YQ-nZk"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerY" secondItem="19u-re-cVE" secondAttribute="centerY" id="PT0-zc-Ryg"/>
                             <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="IH3-8i-gaC" secondAttribute="trailing" constant="169" id="RlI-AA-79m"/>
+                            <constraint firstItem="IH3-8i-gaC" firstAttribute="top" secondItem="yeb-KL-xw6" secondAttribute="bottom" constant="22" id="doc-4v-IxN"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="169" id="eXA-Lh-LWg"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerX" secondItem="19u-re-cVE" secondAttribute="centerX" id="rC6-G2-2I7"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="centerX" secondItem="19u-re-cVE" secondAttribute="centerX" id="ryP-C6-AGI"/>
+                            <constraint firstItem="wfQ-mU-UIT" firstAttribute="top" secondItem="IH3-8i-gaC" secondAttribute="bottom" constant="16" id="ucz-Uq-bvX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,6 +143,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNK-A8-AGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="66"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iGN-tw-IAs">
+            <objects>
+                <viewController id="9NQ-r9-iWO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="932-qA-y12">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-1R-x90">
+                                <rect key="frame" x="169" y="403" width="76.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4g-9r-DNT">
+                                <rect key="frame" x="20" y="334.5" width="374" height="45.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-xi-pyk">
+                                <rect key="frame" x="115" y="458" width="184" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YFM-VL-1AL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YFM-VL-1AL" firstAttribute="trailing" secondItem="cEQ-xi-pyk" secondAttribute="trailing" constant="115" id="21t-aF-dgM"/>
+                            <constraint firstItem="B1k-1R-x90" firstAttribute="top" secondItem="V4g-9r-DNT" secondAttribute="bottom" constant="23" id="9KE-By-gq6"/>
+                            <constraint firstItem="B1k-1R-x90" firstAttribute="centerX" secondItem="932-qA-y12" secondAttribute="centerX" id="Lpq-Fn-OFQ"/>
+                            <constraint firstItem="V4g-9r-DNT" firstAttribute="leading" secondItem="YFM-VL-1AL" secondAttribute="leading" constant="20" id="aNz-Fs-H1Y"/>
+                            <constraint firstItem="cEQ-xi-pyk" firstAttribute="top" secondItem="B1k-1R-x90" secondAttribute="bottom" constant="19" id="fN2-Q0-dRz"/>
+                            <constraint firstItem="B1k-1R-x90" firstAttribute="centerY" secondItem="932-qA-y12" secondAttribute="centerY" id="hAj-ai-N06"/>
+                            <constraint firstItem="cEQ-xi-pyk" firstAttribute="leading" secondItem="YFM-VL-1AL" secondAttribute="leading" constant="115" id="i48-yA-3c8"/>
+                            <constraint firstItem="YFM-VL-1AL" firstAttribute="trailing" secondItem="V4g-9r-DNT" secondAttribute="trailing" constant="20" id="rF6-6z-sSG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aN-X1-M0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486.9565217391305" y="65.625"/>
         </scene>
     </scenes>
     <resources>
