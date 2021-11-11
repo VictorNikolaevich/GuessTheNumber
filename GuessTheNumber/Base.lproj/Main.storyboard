@@ -64,6 +64,8 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goVC3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOA-vJ-2eU"/>
+                                    <action selector="myButton4:" destination="5qm-KB-t7G" eventType="touchUpInside" id="4aR-Nj-YOQ"/>
+                                    <segue destination="ATf-RS-ZRN" kind="modal" id="7gz-EA-9eu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-xr-6ht">
@@ -71,15 +73,24 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess a number from 1 to 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-wW-hQ9">
+                                <rect key="frame" x="20" y="239" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LeA-wW-hQ9" secondAttribute="trailing" constant="20" id="ACg-eD-Q2J"/>
                             <constraint firstItem="Yxq-xr-6ht" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cq8-7P-DrC"/>
                             <constraint firstItem="OkN-bk-Lxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O7f-lQ-eZd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yxq-xr-6ht" secondAttribute="trailing" constant="20" id="U1S-ts-EVm"/>
                             <constraint firstItem="OkN-bk-Lxh" firstAttribute="top" secondItem="Yxq-xr-6ht" secondAttribute="bottom" constant="50" id="XwV-g1-7um"/>
+                            <constraint firstItem="LeA-wW-hQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c0N-7b-mKQ"/>
                             <constraint firstItem="OkN-bk-Lxh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBV-fT-ghT"/>
+                            <constraint firstItem="Yxq-xr-6ht" firstAttribute="top" secondItem="LeA-wW-hQ9" secondAttribute="bottom" constant="37.5" id="hog-gV-9zv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -87,6 +98,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="5qm-KB-t7G" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
         </scene>
@@ -95,23 +107,23 @@
             <objects>
                 <viewController storyboardIdentifier="VC2" id="ATf-RS-ZRN" customClass="ViewController2" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19u-re-cVE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-KL-xw6">
-                                <rect key="frame" x="169" y="430" width="76.5" height="36"/>
+                                <rect key="frame" x="169" y="403" width="76.5" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH3-8i-gaC">
-                                <rect key="frame" x="169" y="488" width="76" height="36"/>
+                                <rect key="frame" x="169" y="461" width="76" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfQ-mU-UIT">
-                                <rect key="frame" x="115" y="540" width="184" height="50"/>
+                                <rect key="frame" x="115" y="513" width="184" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
@@ -144,16 +156,16 @@
             </objects>
             <point key="canvasLocation" x="745" y="66"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="iGN-tw-IAs">
             <objects>
-                <viewController id="9NQ-r9-iWO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC3" id="9NQ-r9-iWO" customClass="ViewController3" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="932-qA-y12">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-1R-x90">
-                                <rect key="frame" x="169" y="403" width="76.5" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-1R-x90">
+                                <rect key="frame" x="157.5" y="403" width="99" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,32 +176,56 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-xi-pyk">
-                                <rect key="frame" x="115" y="458" width="184" height="50"/>
+                                <rect key="frame" x="115" y="523" width="184" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="myButton4:" destination="9NQ-r9-iWO" eventType="touchUpInside" id="OgL-D3-lnp"/>
+                                    <segue destination="ATf-RS-ZRN" kind="modal" id="YVk-hL-dkz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auL-cP-BGE">
+                                <rect key="frame" x="131" y="471" width="153" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Compare">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="myCompare:" destination="9NQ-r9-iWO" eventType="touchUpInside" id="Zcp-bY-cSx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YFM-VL-1AL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YFM-VL-1AL" firstAttribute="trailing" secondItem="cEQ-xi-pyk" secondAttribute="trailing" constant="115" id="21t-aF-dgM"/>
+                            <constraint firstItem="YFM-VL-1AL" firstAttribute="trailing" secondItem="auL-cP-BGE" secondAttribute="trailing" constant="130" id="3LI-Ia-7FZ"/>
                             <constraint firstItem="B1k-1R-x90" firstAttribute="top" secondItem="V4g-9r-DNT" secondAttribute="bottom" constant="23" id="9KE-By-gq6"/>
                             <constraint firstItem="B1k-1R-x90" firstAttribute="centerX" secondItem="932-qA-y12" secondAttribute="centerX" id="Lpq-Fn-OFQ"/>
+                            <constraint firstItem="auL-cP-BGE" firstAttribute="leading" secondItem="YFM-VL-1AL" secondAttribute="leading" constant="131" id="Pft-oY-Vme"/>
                             <constraint firstItem="V4g-9r-DNT" firstAttribute="leading" secondItem="YFM-VL-1AL" secondAttribute="leading" constant="20" id="aNz-Fs-H1Y"/>
-                            <constraint firstItem="cEQ-xi-pyk" firstAttribute="top" secondItem="B1k-1R-x90" secondAttribute="bottom" constant="19" id="fN2-Q0-dRz"/>
+                            <constraint firstItem="V4g-9r-DNT" firstAttribute="top" secondItem="auL-cP-BGE" secondAttribute="bottom" constant="-174.5" id="d1C-tK-WxV"/>
+                            <constraint firstItem="cEQ-xi-pyk" firstAttribute="top" secondItem="B1k-1R-x90" secondAttribute="bottom" constant="84" id="fN2-Q0-dRz"/>
                             <constraint firstItem="B1k-1R-x90" firstAttribute="centerY" secondItem="932-qA-y12" secondAttribute="centerY" id="hAj-ai-N06"/>
                             <constraint firstItem="cEQ-xi-pyk" firstAttribute="leading" secondItem="YFM-VL-1AL" secondAttribute="leading" constant="115" id="i48-yA-3c8"/>
                             <constraint firstItem="YFM-VL-1AL" firstAttribute="trailing" secondItem="V4g-9r-DNT" secondAttribute="trailing" constant="20" id="rF6-6z-sSG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel3" destination="B1k-1R-x90" id="5Bk-PQ-ILf"/>
+                        <outlet property="myTextField2" destination="V4g-9r-DNT" id="jh5-mx-Cow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aN-X1-M0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486.9565217391305" y="65.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YVk-hL-dkz"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

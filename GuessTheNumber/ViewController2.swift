@@ -26,14 +26,11 @@ class ViewController2: UIViewController {
         let textFieldInt = Int(textField) ?? 0
         let label = name2
         let labelInt = Int(label) ?? 0
-            
+        
         if labelInt < textFieldInt {
             myLabel2.text = "<"
-        } else if labelInt > textFieldInt{
+        } else if labelInt > textFieldInt {
             myLabel2.text = ">"
-            //} else {
+        }
     }
-    
-
-}
 }

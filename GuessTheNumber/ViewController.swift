@@ -19,6 +19,11 @@ class ViewController: UIViewController {
             vc2.name = myTextField.text!
         }
         
+        let storyboard3 = UIStoryboard(name: "Main", bundle: nil)
+        if let vc3 = storyboard3.instantiateViewController(withIdentifier: "VC3") as? ViewController3 {
+            vc3.name3 = myTextField.text!
+        }
+        
         let randomNumberInt = Int.random(in: 1...100)
         let randomNumberStr = String(randomNumberInt)
         let storyboard2 = UIStoryboard(name: "Main", bundle: nil)
@@ -32,7 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 

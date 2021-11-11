@@ -9,21 +9,34 @@ import UIKit
 
 class ViewController3: UIViewController {
 
+    @IBOutlet weak var myTextField2: UITextField!
+    
+    var name3 = ""
+    
+    @IBOutlet weak var myLabel3: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func myCompare(_ sender: Any) {
+        
+        let userText = name3
+        let userTextInt = Int(userText) ?? 0
+        let playerText = myTextField2.text!
+        let playerTextInt = Int(playerText) ?? 0
+        
+        if playerTextInt < userTextInt {
+            myLabel3.text = "<"
+        } else if playerTextInt > userTextInt {
+            myLabel3.text = ">"
+        }
+        
     }
-    */
-
+    
+    @IBAction func myButton4(_ sender: Any) {
+    }
+    
 }
