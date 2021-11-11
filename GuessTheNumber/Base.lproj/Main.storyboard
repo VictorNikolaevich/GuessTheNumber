@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ji4-vY-7kl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6xh-fp-yTu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="71o-CI-RbH">
+            <objects>
+                <navigationController id="6xh-fp-yTu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0H-X7-BdB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ji4-vY-7kl" kind="relationship" relationship="rootViewController" id="NXH-Jj-WVh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K74-HJ-zZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="66"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="59s-J5-FcJ">
             <objects>
@@ -27,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZD-z9-XCo">
-                                <rect key="frame" x="20" y="44" width="374" height="36"/>
+                                <rect key="frame" x="20" y="88" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +59,7 @@
                             <constraint firstItem="xKf-ob-hao" firstAttribute="centerX" secondItem="B10-1o-Qkx" secondAttribute="centerX" id="spQ-7s-9ys"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ibh-0g-dyG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vi-zu-YAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +81,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goVC3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOA-vJ-2eU"/>
+                                    <action selector="myButton3:" destination="5qm-KB-t7G" eventType="touchUpInside" id="e0l-Al-4YR"/>
                                     <action selector="myButton4:" destination="5qm-KB-t7G" eventType="touchUpInside" id="4aR-Nj-YOQ"/>
                                     <segue destination="ATf-RS-ZRN" kind="modal" id="7gz-EA-9eu"/>
                                 </connections>
@@ -110,14 +128,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-KL-xw6">
-                                <rect key="frame" x="169" y="403" width="76.5" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH3-8i-gaC">
-                                <rect key="frame" x="169" y="461" width="76" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-KL-xw6">
+                                <rect key="frame" x="157.5" y="403" width="99" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,22 +141,43 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="9NQ-r9-iWO" kind="modal" id="X4n-EW-xXk"/>
+                                    <action selector="myButton3:" destination="ATf-RS-ZRN" eventType="touchUpInside" id="UnQ-EH-Jhk"/>
+                                    <segue destination="9NQ-r9-iWO" kind="modal" id="9jP-Md-0a3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hds-N5-MGA">
+                                <rect key="frame" x="20" y="334" width="374" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate number and compare">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="myButton2:" destination="ATf-RS-ZRN" eventType="touchUpInside" id="cPd-NW-rsm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH3-8i-gaC">
+                                <rect key="frame" x="20" y="458" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GGc-Af-8zh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hds-N5-MGA" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="3Sd-HM-45l"/>
                             <constraint firstItem="wfQ-mU-UIT" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="115" id="5fw-1d-i1B"/>
                             <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="wfQ-mU-UIT" secondAttribute="trailing" constant="115" id="7rL-YQ-nZk"/>
+                            <constraint firstItem="IH3-8i-gaC" firstAttribute="trailing" secondItem="hds-N5-MGA" secondAttribute="trailing" id="FjU-dV-9UO"/>
+                            <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="hds-N5-MGA" secondAttribute="leading" id="Lm9-Cw-Zqg"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerY" secondItem="19u-re-cVE" secondAttribute="centerY" id="PT0-zc-Ryg"/>
-                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="IH3-8i-gaC" secondAttribute="trailing" constant="169" id="RlI-AA-79m"/>
-                            <constraint firstItem="IH3-8i-gaC" firstAttribute="top" secondItem="yeb-KL-xw6" secondAttribute="bottom" constant="22" id="doc-4v-IxN"/>
-                            <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="169" id="eXA-Lh-LWg"/>
+                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="hds-N5-MGA" secondAttribute="trailing" constant="20" id="Urd-GN-ary"/>
+                            <constraint firstItem="IH3-8i-gaC" firstAttribute="top" secondItem="yeb-KL-xw6" secondAttribute="bottom" constant="19" id="doc-4v-IxN"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerX" secondItem="19u-re-cVE" secondAttribute="centerX" id="rC6-G2-2I7"/>
-                            <constraint firstItem="IH3-8i-gaC" firstAttribute="centerX" secondItem="19u-re-cVE" secondAttribute="centerX" id="ryP-C6-AGI"/>
-                            <constraint firstItem="wfQ-mU-UIT" firstAttribute="top" secondItem="IH3-8i-gaC" secondAttribute="bottom" constant="16" id="ucz-Uq-bvX"/>
+                            <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="sGo-G6-ISc"/>
+                            <constraint firstItem="wfQ-mU-UIT" firstAttribute="top" secondItem="IH3-8i-gaC" secondAttribute="bottom" constant="19" id="ucz-Uq-bvX"/>
+                            <constraint firstItem="yeb-KL-xw6" firstAttribute="top" secondItem="hds-N5-MGA" secondAttribute="bottom" constant="31" id="wWx-i9-LQr"/>
+                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="IH3-8i-gaC" secondAttribute="trailing" constant="20" id="xro-j5-Zjz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -154,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNK-A8-AGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="66"/>
+            <point key="canvasLocation" x="744.92753623188412" y="65.625"/>
         </scene>
         <!--View Controller3-->
         <scene sceneID="iGN-tw-IAs">
@@ -182,8 +215,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="myButton4:" destination="9NQ-r9-iWO" eventType="touchUpInside" id="OgL-D3-lnp"/>
-                                    <segue destination="ATf-RS-ZRN" kind="modal" id="YVk-hL-dkz"/>
+                                    <segue destination="ATf-RS-ZRN" kind="modal" id="HrJ-rw-zd3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auL-cP-BGE">
@@ -222,9 +254,39 @@
             </objects>
             <point key="canvasLocation" x="1486.9565217391305" y="65.625"/>
         </scene>
+        <!--View Controller4-->
+        <scene sceneID="5ea-6E-gvN">
+            <objects>
+                <viewController storyboardIdentifier="VC4" id="6XZ-ze-cXA" customClass="ViewController4" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2c-nu-F3h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-n5-MSJ">
+                                <rect key="frame" x="169" y="430" width="76.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NQb-Ek-79k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="udt-n5-MSJ" firstAttribute="centerX" secondItem="R2c-nu-F3h" secondAttribute="centerX" id="Scd-ki-Gz5"/>
+                            <constraint firstItem="udt-n5-MSJ" firstAttribute="centerY" secondItem="R2c-nu-F3h" secondAttribute="centerY" id="sQl-cc-Yds"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="udt-n5-MSJ" id="GSI-FD-1Nk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bjd-tL-Sne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270" y="66"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YVk-hL-dkz"/>
+        <segue reference="HrJ-rw-zd3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

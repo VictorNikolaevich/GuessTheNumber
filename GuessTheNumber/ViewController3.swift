@@ -8,13 +8,12 @@
 import UIKit
 
 class ViewController3: UIViewController {
-
+    
     @IBOutlet weak var myTextField2: UITextField!
     
     var name3 = ""
     
     @IBOutlet weak var myLabel3: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +22,28 @@ class ViewController3: UIViewController {
     
     @IBAction func myCompare(_ sender: Any) {
         
-        let userText = name3
-        let userTextInt = Int(userText) ?? 0
+        let userTextInt = Int(name3) ?? 0
         let playerText = myTextField2.text!
         let playerTextInt = Int(playerText) ?? 0
         
-        if playerTextInt < userTextInt {
-            myLabel3.text = "<"
+        if playerTextInt == userTextInt {
+            myLabel3.text = "="
+            let storyboard4 = UIStoryboard(name: "Main", bundle: nil)
+            if let vc4 = storyboard4.instantiateViewController(withIdentifier: "VC4") as? ViewController4 {
+                vc4.name5 = "You win"
+                show(vc4, sender: nil)
+            }
+            
+            let newVC = storyboard?.instantiateViewController(withIdentifier: "VC4")
+            present(newVC!, animated: true, completion: nil)
+            
         } else if playerTextInt > userTextInt {
             myLabel3.text = ">"
+        } else if playerTextInt < userTextInt {
+            myLabel3.text = "<"
         }
         
     }
     
-    @IBAction func myButton4(_ sender: Any) {
-    }
-    
 }
+
