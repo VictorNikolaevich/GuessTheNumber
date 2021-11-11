@@ -29,11 +29,11 @@
             <objects>
                 <viewController id="ji4-vY-7kl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B10-1o-Qkx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKf-ob-hao">
-                                <rect key="frame" x="85.5" y="423" width="243.5" height="50"/>
+                                <rect key="frame" x="85.5" y="396" width="243.5" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start new game">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZD-z9-XCo">
-                                <rect key="frame" x="20" y="88" width="374" height="36"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -268,12 +268,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT6-O1-KW5">
+                                <rect key="frame" x="121" y="496" width="172" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New game">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ji4-vY-7kl" kind="modal" id="Vth-qh-8dU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NQb-Ek-79k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="udt-n5-MSJ" firstAttribute="centerX" secondItem="R2c-nu-F3h" secondAttribute="centerX" id="Scd-ki-Gz5"/>
+                            <constraint firstItem="JT6-O1-KW5" firstAttribute="top" secondItem="udt-n5-MSJ" secondAttribute="bottom" constant="30" id="YIU-R2-I8P"/>
+                            <constraint firstItem="JT6-O1-KW5" firstAttribute="leading" secondItem="NQb-Ek-79k" secondAttribute="leading" constant="121" id="oCU-1e-v6Y"/>
                             <constraint firstItem="udt-n5-MSJ" firstAttribute="centerY" secondItem="R2c-nu-F3h" secondAttribute="centerY" id="sQl-cc-Yds"/>
+                            <constraint firstItem="NQb-Ek-79k" firstAttribute="trailing" secondItem="JT6-O1-KW5" secondAttribute="trailing" constant="121" id="vpc-01-pgU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -287,6 +300,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="HrJ-rw-zd3"/>
+        <segue reference="Vth-qh-8dU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

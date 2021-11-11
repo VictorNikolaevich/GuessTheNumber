@@ -17,7 +17,7 @@ class ViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
     @IBAction func myButton2(_ sender: Any) {
@@ -28,7 +28,7 @@ class ViewController2: UIViewController {
         
         let textField = name
         let textFieldInt = Int(textField) ?? 0
-        
+
         if randomNumberInt < textFieldInt {
             myLabel2.text = "<"
         } else if randomNumberInt > textFieldInt {
@@ -40,22 +40,22 @@ class ViewController2: UIViewController {
                 vc4.name5 = "You lose"
                 show(vc4, sender: nil)
             }
+                
+                let newVC = storyboard?.instantiateViewController(withIdentifier: "VC4")
+                present(newVC!, animated: true, completion: nil)
+            }
+        }
+        
+        @IBAction func myButton3(_ sender: Any) {
             
-            let newVC = storyboard?.instantiateViewController(withIdentifier: "VC4")
-            present(newVC!, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let vc3 = storyboard.instantiateViewController(withIdentifier: "VC3") as? ViewController3 {
+                vc3.name3 = name
+                show(vc3, sender: nil)
+            }
+            
+            myLabel2.text = ""
+            
         }
-    }
-    
-    @IBAction func myButton3(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let vc3 = storyboard.instantiateViewController(withIdentifier: "VC3") as? ViewController3 {
-            vc3.name3 = name
-            show(vc3, sender: nil)
-        }
-        
-        myLabel2.text = ""
-        
-    }
 }
