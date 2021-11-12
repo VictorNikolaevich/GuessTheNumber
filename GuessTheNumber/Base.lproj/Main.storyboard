@@ -215,6 +215,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="myButtonNext2:" destination="9NQ-r9-iWO" eventType="touchUpInside" id="cAS-ez-sNo"/>
                                     <segue destination="ATf-RS-ZRN" kind="modal" id="HrJ-rw-zd3"/>
                                 </connections>
                             </button>
