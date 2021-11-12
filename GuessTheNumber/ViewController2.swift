@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController2: UIViewController {
     
+    @IBOutlet weak var myLabel3: UILabel!
+    
+   var labelCount = ""
+   
     @IBOutlet weak var myLabel: UILabel!
     
     var name = ""
@@ -17,11 +21,12 @@ class ViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+      myLabel3.text = labelCount
+   
     }
     
     @IBAction func myButton2(_ sender: Any) {
-        
         
         let randomNumberInt = Int.random(in: 1...100)
         myLabel.text = String(randomNumberInt)

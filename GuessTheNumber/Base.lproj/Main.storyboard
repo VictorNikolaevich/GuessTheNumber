@@ -83,6 +83,7 @@
                                     <action selector="goVC3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOA-vJ-2eU"/>
                                     <action selector="myButton3:" destination="5qm-KB-t7G" eventType="touchUpInside" id="e0l-Al-4YR"/>
                                     <action selector="myButton4:" destination="5qm-KB-t7G" eventType="touchUpInside" id="4aR-Nj-YOQ"/>
+                                    <action selector="myTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALP-6M-tmj"/>
                                     <segue destination="ATf-RS-ZRN" kind="modal" id="7gz-EA-9eu"/>
                                 </connections>
                             </button>
@@ -161,6 +162,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round№" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-kz-gTC">
+                                <rect key="frame" x="20" y="20" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4z-bR-WAd">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GGc-Af-8zh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -170,19 +183,27 @@
                             <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="wfQ-mU-UIT" secondAttribute="trailing" constant="115" id="7rL-YQ-nZk"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="trailing" secondItem="hds-N5-MGA" secondAttribute="trailing" id="FjU-dV-9UO"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="hds-N5-MGA" secondAttribute="leading" id="Lm9-Cw-Zqg"/>
+                            <constraint firstItem="uWG-kz-gTC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="MZx-oT-Xyo"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerY" secondItem="19u-re-cVE" secondAttribute="centerY" id="PT0-zc-Ryg"/>
                             <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="hds-N5-MGA" secondAttribute="trailing" constant="20" id="Urd-GN-ary"/>
+                            <constraint firstItem="uWG-kz-gTC" firstAttribute="top" secondItem="GGc-Af-8zh" secondAttribute="top" constant="20" id="Wnk-7v-qkI"/>
+                            <constraint firstItem="p4z-bR-WAd" firstAttribute="top" secondItem="uWG-kz-gTC" secondAttribute="bottom" constant="8" symbolic="YES" id="WpD-t8-j57"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="top" secondItem="yeb-KL-xw6" secondAttribute="bottom" constant="19" id="doc-4v-IxN"/>
+                            <constraint firstItem="p4z-bR-WAd" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="hvD-Yn-nb8"/>
+                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="uWG-kz-gTC" secondAttribute="trailing" constant="20" id="qhL-gE-cXF"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="centerX" secondItem="19u-re-cVE" secondAttribute="centerX" id="rC6-G2-2I7"/>
+                            <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="p4z-bR-WAd" secondAttribute="trailing" constant="20" id="s6Q-Ay-VLb"/>
                             <constraint firstItem="IH3-8i-gaC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="sGo-G6-ISc"/>
                             <constraint firstItem="wfQ-mU-UIT" firstAttribute="top" secondItem="IH3-8i-gaC" secondAttribute="bottom" constant="19" id="ucz-Uq-bvX"/>
                             <constraint firstItem="yeb-KL-xw6" firstAttribute="top" secondItem="hds-N5-MGA" secondAttribute="bottom" constant="31" id="wWx-i9-LQr"/>
                             <constraint firstItem="GGc-Af-8zh" firstAttribute="trailing" secondItem="IH3-8i-gaC" secondAttribute="trailing" constant="20" id="xro-j5-Zjz"/>
+                            <constraint firstItem="uWG-kz-gTC" firstAttribute="leading" secondItem="GGc-Af-8zh" secondAttribute="leading" constant="20" id="zQZ-FZ-65N"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="yeb-KL-xw6" id="3Qm-30-8XJ"/>
                         <outlet property="myLabel2" destination="IH3-8i-gaC" id="mKS-ro-9J7"/>
+                        <outlet property="myLabel3" destination="p4z-bR-WAd" id="mH9-f8-BPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNK-A8-AGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -300,6 +321,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9jP-Md-0a3"/>
         <segue reference="HrJ-rw-zd3"/>
         <segue reference="Vth-qh-8dU"/>
     </inferredMetricsTieBreakers>
