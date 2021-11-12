@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var myTextField: UITextField!
     
     @IBAction func goVC3(_ sender: Any) {
@@ -29,12 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func myTextButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if let vc2 = storyboard.instantiateViewController(withIdentifier: "VC2") as? ViewController2 {
-            vc2.labelCount = "1"
-            show(vc2, sender: nil)
-        }
     }
     
 }

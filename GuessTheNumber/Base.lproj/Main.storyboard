@@ -83,7 +83,7 @@
                                     <action selector="goVC3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOA-vJ-2eU"/>
                                     <action selector="myButton3:" destination="5qm-KB-t7G" eventType="touchUpInside" id="e0l-Al-4YR"/>
                                     <action selector="myButton4:" destination="5qm-KB-t7G" eventType="touchUpInside" id="4aR-Nj-YOQ"/>
-                                    <action selector="myTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALP-6M-tmj"/>
+                                    <action selector="myTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qi1-t0-ehI"/>
                                     <segue destination="ATf-RS-ZRN" kind="modal" id="7gz-EA-9eu"/>
                                 </connections>
                             </button>
@@ -321,8 +321,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9jP-Md-0a3"/>
-        <segue reference="HrJ-rw-zd3"/>
+        <segue reference="7gz-EA-9eu"/>
         <segue reference="Vth-qh-8dU"/>
     </inferredMetricsTieBreakers>
     <resources>

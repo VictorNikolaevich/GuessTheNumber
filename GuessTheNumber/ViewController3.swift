@@ -52,7 +52,8 @@ class ViewController3: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let vc2 = storyboard.instantiateViewController(withIdentifier: "VC2") as? ViewController2 {
-            vc2.labelCount = String((Int(vc2.labelCount) ?? 0)+1)
+            vc2.name = name3
+            vc2.labelCount = vc2.labelCount + 1
             show(vc2, sender: nil)
         }
         

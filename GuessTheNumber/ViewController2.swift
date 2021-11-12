@@ -11,7 +11,7 @@ class ViewController2: UIViewController {
     
     @IBOutlet weak var myLabel3: UILabel!
     
-   var labelCount = ""
+   var labelCount = 1
    
     @IBOutlet weak var myLabel: UILabel!
     
@@ -22,7 +22,7 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      myLabel3.text = labelCount
+        myLabel3.text = String(labelCount)
    
     }
     
@@ -59,8 +59,6 @@ class ViewController2: UIViewController {
                 vc3.name3 = name
                 show(vc3, sender: nil)
             }
-            
-            myLabel2.text = ""
             
         }
 }
